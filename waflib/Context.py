@@ -453,12 +453,12 @@ class Context(ctx):
 		if err and quiet != STDERR and quiet != BOTH:
 			self.to_log('err: %s' % err)
 
-		if ret:
-			e = Errors.WafError('Command %r returned %r' % (cmd, ret))
-			e.returncode = ret
-			e.stderr = err
-			e.stdout = out
-			raise e
+		# if ret:
+		# 	e = Errors.WafError('Command %r returned %r' % (cmd, ret))
+		# 	e.returncode = ret
+		# 	e.stderr = err
+		# 	e.stdout = out
+		# 	raise e
 
 		if to_ret == BOTH:
 			return (out, err)
